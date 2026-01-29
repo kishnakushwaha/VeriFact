@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+*.pdf
+!README.md
+
+# Keys and secrets
+*.pem
+*.key
+.env
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Streamlit (not needed for Flask API)
+streamlit_app/
+
+# OS
+.DS_Store
+Thumbs.db

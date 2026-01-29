@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: fake-news-detector
+    ports:
+      - "5000:5000"
+    environment:
+      - TAVILY_API_KEY=${TAVILY_API_KEY:-}
+      - STANCE_MODEL=bart
+      - DEBUG=false
+      - PORT=5000
+    volumes:
+      # Mount for development (hot-reload)
+      - ./static:/app/static:ro
+    # Changed from unless-stopped to on-failure with max retries
+    # Prevents infinite OOM restart loops
+    restart: "on-failure:3"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:5000/api/health" ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          # Reduced from 4G to 3G to leave headroom for OS/SSH
+          memory: 3G
+        reservations:
+          memory: 1G
