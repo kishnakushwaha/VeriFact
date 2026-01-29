@@ -123,6 +123,3 @@ pytest tests/ -v
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## 👤 Author
-
-**Group Project**
