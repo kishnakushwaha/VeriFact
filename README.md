@@ -125,5 +125,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-**Adetya Jamwal**
-- GitHub: [@AdetyaJamwal04](https://github.com/AdetyaJamwal04)
+**Group Project**
