@@ -96,3 +96,8 @@ data/
 *.csv
 *.json
 !requirements.txt
+
+# Private Reports and Guides
+VeriFact Complete Project Guide.pdf
+VeriFact_Report_Final.docx
+report-Format.pdf
